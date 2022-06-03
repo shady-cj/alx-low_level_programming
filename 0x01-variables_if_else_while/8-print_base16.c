@@ -13,6 +13,7 @@ int main(void)
 		if (num > 9)
 		{
 			char a;
+
 			for (a = 'a'; a <= 'f'; a++)
 			{
 				putchar(a);
