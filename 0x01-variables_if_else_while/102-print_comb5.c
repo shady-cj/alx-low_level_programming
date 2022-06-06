@@ -30,7 +30,7 @@ int main(void)
 					putchar((k % 10) + '0');
 					putchar((j % 10) + '0');
 
-					if (n + i + k + j < 116)
+					if (n + i + k + j < 35)
 					{
 						putchar(',');
 						putchar(' ');
