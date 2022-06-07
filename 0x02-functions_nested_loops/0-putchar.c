@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - prints the number of arguments passed to the program(Entry point)
@@ -8,6 +8,14 @@
 
 int main(void)
 {
-    printf("_putchar\n");
+    _putchar('_');
+    _putchar('p');
+    _putchar('u');
+    _putchar('t');
+    _putchar('c');
+    _putchar('h');
+    _putchar('a');
+    _putchar('r');
+    _putchar('\n');
     return (0); 
 }
