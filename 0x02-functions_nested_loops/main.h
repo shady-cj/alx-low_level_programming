@@ -88,4 +88,12 @@ void jack_bauer(void);
  * Return: void
  * Description: prints the time in 24-hour format
  */
+
+void times_table(void);
+/**
+ * times_table - prints the times table
+ * @void: void
+ * Return: void
+ * Description: prints the times table
+ */
 #endif
