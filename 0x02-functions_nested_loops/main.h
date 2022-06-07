@@ -59,4 +59,16 @@ int print_sign(int n);
  *       print_sign(1) = 1 prints +
  *      print_sign(-1) = -1 prints -
  */ 
+
+
+int _abs(int);
+/**
+ * _abs - returns the absolute value of a number
+ * @n: The number to check
+ * Return: The absolute value of n
+ * Description: returns the absolute value of a number
+ * Example: _abs(0) = 0
+ *       _abs(1) = 1
+ *      _abs(-1) = 1
+ */
 #endif
