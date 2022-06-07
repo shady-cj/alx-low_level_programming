@@ -108,4 +108,10 @@ int add(int, int);
  *      add(-1, -2) = -3
  *     add(1, -2) = -1
  */
+void print_to_98(int n);
+/**
+ * print_to_98 - prints the numbers from n to 98
+ * @n: The starting number
+ * Return: void
+ */
 #endif
