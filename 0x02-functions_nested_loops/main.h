@@ -96,4 +96,16 @@ void times_table(void);
  * Return: void
  * Description: prints the times table
  */
+
+int add(int, int);
+/**
+ * add - adds two numbers
+ * @a: The first number
+ * @b: The second number
+ * Return: The sum of a and b
+ * Description: adds two numbers
+ * Example: add(1, 2) = 3
+ *      add(-1, -2) = -3
+ *     add(1, -2) = -1
+ */
 #endif
