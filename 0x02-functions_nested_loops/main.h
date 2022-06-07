@@ -71,4 +71,13 @@ int _abs(int);
  *       _abs(1) = 1
  *      _abs(-1) = 1
  */
+
+int print_last_digit(int);
+/**
+ * print_last_digit - prints the last digit of a number
+ * @n: The number to check
+ * Return: The last digit of n
+ * Description: prints the last digit of a number
+ * Example: print_last_digit(89) = 9
+ */
 #endif

@@ -1,7 +1,6 @@
-#include "main.h"
 #include <stdlib.h>
 
-int _abs(int c)
+int _abs(int n)
 {
-    return (abs(c));
+    return (abs(n));
 }
