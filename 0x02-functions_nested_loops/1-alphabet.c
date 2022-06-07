@@ -1,4 +1,9 @@
-int _putchar(char c);
+#include "main.h"
+
+/**
+ * _putchar - writes the character c to stdout
+ * Return: On success void.
+ */
 void print_alphabet(void)
 {
     char c;
