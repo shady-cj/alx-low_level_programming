@@ -2,9 +2,8 @@
 #include <ctype.h>
 /**
  * _isalpha - checks for characters
- * 
- * @c 
- * Return: int (0 if not alpha, 1 if alpha)) 
+ * @c
+ * Return: int (0 if not alpha, 1 if alpha))
  */
 int _isalpha(int c)
 {
