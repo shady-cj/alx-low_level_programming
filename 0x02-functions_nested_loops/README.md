@@ -1,6 +1,4 @@
-
-
-0x02. C - Functions, nested loops
+# 0x02. C - Functions, nested loops
 
     By Julien Barbier
     Weight: 1
@@ -12,7 +10,7 @@
 
 Resources
 
-Read or watch:
+# Read or watch:
 
     Nested while loops
     C - Functions
@@ -22,7 +20,8 @@ Read or watch:
 
 Learning Objectives
 
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+# At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+
 General
 
     What are nested loops and how to use them
@@ -32,4 +31,3 @@ General
     Scope of variables
     What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
     What are header files and how to to use them with #include
-
