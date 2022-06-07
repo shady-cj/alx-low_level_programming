@@ -37,4 +37,17 @@ int _islower(int c);
  * Example: _islower('a') = 1
  *         _islower('A') = 0
  */ 
+
+int _isalpha(int c);
+/**
+ * _isalpha - checks for alphabetic character
+ * @c: The character to check
+ * Return: 1 if c is alphabetic, 0 otherwise
+ * Description: checks for alphabetic character
+ * Example: _isalpha('a') = 1
+ *        _isalpha('A') = 1
+ *       _isalpha('1') = 0
+ */
+
+
 #endif
