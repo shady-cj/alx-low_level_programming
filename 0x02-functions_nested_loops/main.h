@@ -49,5 +49,14 @@ int _isalpha(int c);
  *       _isalpha('1') = 0
  */
 
-
+int print_sign(int n);
+/**
+ * print_sign - prints the sign of a number
+ * @n: The number to check
+ * Return: 1 if positive, 0 if zero, -1 if negative
+ * Description: prints the sign of a number
+ * Example: print_sign(0) = 0 prints 0
+ *       print_sign(1) = 1 prints +
+ *      print_sign(-1) = -1 prints -
+ */ 
 #endif
