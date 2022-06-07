@@ -80,4 +80,12 @@ int print_last_digit(int);
  * Description: prints the last digit of a number
  * Example: print_last_digit(89) = 9
  */
+
+void jack_bauer(void);
+/**
+ * jack_bauer - prints the time in 24-hour format
+ * @void: void
+ * Return: void
+ * Description: prints the time in 24-hour format
+ */
 #endif
