@@ -78,4 +78,11 @@ void print_triangle(int size);
  * @size: The size of the triangle
  * Return: void
  */
+
+void print_number(int n);
+/**
+ * print_number - A function that prints integer n
+ * @n: integer to be printed
+ * Return: void
+ */
 #endif
