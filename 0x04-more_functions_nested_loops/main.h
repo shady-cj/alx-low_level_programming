@@ -71,4 +71,11 @@ void print_square(int size);
  * Return: void
  */
 
+
+void print_triangle(int size);
+/**
+ * print_triangle - A function that print '#' in form of a triangle
+ * @size: The size of the triangle
+ * Return: void
+ */
 #endif
