@@ -55,4 +55,13 @@ void print_line(int n);
  * @n: The number of '_' to print
  * Return: void
  */
+
+void print_diagonal(int n);
+/**
+ * print_diagonal - A function that print lines with \
+ * @n: The number of '\' to print
+ * Return: void
+ */
+
+
 #endif
