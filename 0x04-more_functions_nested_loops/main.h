@@ -42,4 +42,10 @@ void print_most_numbers(void);
  * print_most_numbers - Prints numbers from 0 through 9 except 2 and 4
  * Return: void
  */
+
+void more_numbers(void);
+/**
+ * more_numbers - Prints numbers from 0 to 14, 10 times
+ * Return: void
+ */
 #endif
