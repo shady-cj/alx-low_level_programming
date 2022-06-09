@@ -30,4 +30,9 @@ int _putchar(char c);
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately
  */
+void print_numbers(void);
+/**
+ * print_numbers - Prints numbers from 0 through 9
+ * Return: void
+ */
 #endif
