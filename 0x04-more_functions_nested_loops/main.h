@@ -20,4 +20,14 @@ int mul(int a, int b);
  * @b: second number to be multiplied
  * Return: int products of a and b
  */
+
+int _putchar(char c);
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately
+ */
 #endif
