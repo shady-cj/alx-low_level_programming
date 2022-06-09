@@ -1,4 +1,4 @@
-#include <ctype.io>
+#include <ctype.h>
 #include "main.h"
 /**
  * _isupper - A function that returns 1 or 0 if a character
