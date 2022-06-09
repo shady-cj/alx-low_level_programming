@@ -9,11 +9,10 @@ void print_number(int n)
 {
 	int i = abs(n);
 	int rem, mod;
-
+	
 	if (n < 0)
-	{
 		_putchar('-');
-	}
+
 	rem = i / 10;
 	mod = i % 10;
 	if (rem > 0)
