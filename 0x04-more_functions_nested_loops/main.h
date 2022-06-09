@@ -48,4 +48,11 @@ void more_numbers(void);
  * more_numbers - Prints numbers from 0 to 14, 10 times
  * Return: void
  */
+
+void print_line(int n);
+/**
+ * print_line - A function that print lines with _
+ * @n: The number of '_' to print
+ * Return: void
+ */
 #endif
