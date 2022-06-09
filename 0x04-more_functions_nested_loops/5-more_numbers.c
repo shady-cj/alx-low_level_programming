@@ -18,7 +18,7 @@ void more_numbers(void)
 			div = i / 10;
 			if (i > 9)
 				_putchar(div + '0');
-			_putchar(div + '0');
+			_putchar(rem + '0');
 
 		}
 		_putchar('\n');
