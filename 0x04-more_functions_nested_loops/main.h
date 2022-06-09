@@ -63,5 +63,12 @@ void print_diagonal(int n);
  * Return: void
  */
 
+void print_square(int size);
+
+/**
+ * print_square - A function that prints '#' a certain number of times
+ * @size: Number of times to print '#'
+ * Return: void
+ */
 
 #endif
