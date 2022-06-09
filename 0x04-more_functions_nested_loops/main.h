@@ -13,4 +13,11 @@ int _isdigit(int c);
  * @c: The character to be checked
  * Return: int 0 or 1
  */
+int mul(int a, int b);
+/**
+ * mul - A function that returns the product or 2 numbers
+ * @a: First number
+ * @b: second number to be multiplied
+ * Return: int products of a and b
+ */
 #endif
