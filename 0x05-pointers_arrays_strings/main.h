@@ -27,5 +27,11 @@ void _puts(char *str);
  * @str: String to be printed
  * Return: void
  */
+void print_rev(char *s);
+/**
+ * print_rev - Reverse a string
+ * @s: String to be reversed
+ * Return: void
+ */
 
 #endif
