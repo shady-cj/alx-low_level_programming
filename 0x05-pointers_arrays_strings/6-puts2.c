@@ -2,7 +2,7 @@
 #include <string.h>
 /**
  * puts2 - Prints every other character of a string starting with the first character
- * @strL String to be printed
+ * @str String to be printed
  * Return: void
  */
 
