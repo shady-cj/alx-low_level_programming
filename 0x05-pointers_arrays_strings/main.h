@@ -33,5 +33,11 @@ void print_rev(char *s);
  * @s: String to be reversed
  * Return: void
  */
+void rev_string(char *s);
+/**
+ * rev_string - Reverse a string
+ * @s: String to be reversed
+ * Return: void
+ */
 
 #endif
