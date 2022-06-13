@@ -58,4 +58,11 @@ void print_array(int *a, int n);
  * @n: Number of elements to be printed from the array
  * Return: void
  */
+char *_strcpy(char *dest, char *src);
+/**
+ * _strcpy - Copy the string src to dest
+ * @dest: Destination string
+ * @src: Source string
+ * Return: char the new string
+ */
 #endif
