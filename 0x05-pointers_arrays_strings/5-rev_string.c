@@ -17,7 +17,7 @@ void rev_string(char *s)
 	{
 		j = i + 1;
 		a = s[i];
-		if (j >= (len - j))
+		if (j > (len - j))
 			break;
 		s[i] = s[len - j];
 		s[len - j] = a;
