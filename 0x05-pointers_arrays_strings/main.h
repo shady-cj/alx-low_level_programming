@@ -21,5 +21,11 @@ int _strlen(char *s);
  * @s: the string s
  * Return: int
  */
+void _puts(char *str);
+/**
+ * _puts - Prints a string and a new line
+ * @str: String to be printed
+ * Return: void
+ */
 
 #endif
