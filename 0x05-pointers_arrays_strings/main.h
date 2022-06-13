@@ -45,4 +45,10 @@ void puts2(char *str);
  * @str: String to be printed
  * Return: void 
  */
+void puts_half(char *str);
+/**
+ * puts_half - Prints the second half of a string
+ * @str: String to be splitted into half
+ * Return: void
+ */
 #endif
