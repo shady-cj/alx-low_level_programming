@@ -51,4 +51,11 @@ void puts_half(char *str);
  * @str: String to be splitted into half
  * Return: void
  */
+void print_array(int *a, int n);
+/**
+ * print_array - Prints the n content of an array of integers
+ * @a: Array to be printed
+ * @n: Number of elements to be printed from the array
+ * Return: void
+ */
 #endif
