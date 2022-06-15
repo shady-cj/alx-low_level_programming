@@ -29,9 +29,9 @@ int _strcmp(char *s1, char *s2)
 	if (k == l)
 		ret = 0;
 	else if (k > l)
-		ret = 1;
+		ret = 15;
 	else
-		ret = -1;
+		ret = -15;
 	return (ret);
 
 }
