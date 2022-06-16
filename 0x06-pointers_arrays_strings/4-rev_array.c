@@ -1,3 +1,4 @@
+
 /**
  * reverse_array - This reverses the array a
  * @a: The array to be reversed
@@ -13,12 +14,13 @@ void reverse_array(int *a, int n)
 	{
 		j = i + 1;
 		initial_value = a[i];
-
-		a[i] = a[n - j];
-		a[n - j] = initial_value;
+		
 
 		if (i > (n - j))
 			break;
+
+		a[i] = a[n - j];
+		a[n - j] = initial_value;
 
 	}
 }
