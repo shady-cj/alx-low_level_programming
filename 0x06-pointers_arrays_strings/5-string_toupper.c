@@ -1,3 +1,4 @@
+
 /**
  * string_toupper - it converts a string to all
  * uppercase
@@ -11,7 +12,7 @@ char *string_toupper(char *str)
 	{
 		if (*str >= 97 && *str <= 122)
 			*str = *str - 32;
-		*str++;
+		str++;
 	}
 	return (str);
 }
