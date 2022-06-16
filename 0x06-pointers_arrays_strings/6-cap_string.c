@@ -35,22 +35,21 @@ char *cap_string(char *str)
 		j = i - 1;
 		if (j >= 0)
 		{
-			k = 0;
+		k = 0;
 
-			while (k < 14)
-			{
-				if (str[j] == s[k])
-				{
-					str[i] = toupper(str[i]);
-					break;
-				}
-				k++;
-			}
-	
+		while (k < 14)
+		{
+		if (str[j] == s[k])
+		{
+		str[i] = toupper(str[i]);
+		break;		
+		}
+		k++;
+		}	
 		}
 		else
 		{
-			str[i] = toupper(str[i]);
+		str[i] = toupper(str[i]);
 		}
 		i++;
 	}
