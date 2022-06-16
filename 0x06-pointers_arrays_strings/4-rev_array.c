@@ -14,7 +14,6 @@ void reverse_array(int *a, int n)
 	{
 		j = i + 1;
 		initial_value = a[i];
-		
 
 		if (i > (n - j))
 			break;
