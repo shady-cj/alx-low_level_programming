@@ -26,7 +26,7 @@ char *leet(char *str)
 		while (j < 5)
 		{
 			if (str[i] ==
-			alpha[num[j]] || 
+			alpha[num[j]] |
 			str[i] ==
 			alpha[num[j]] - 32)
 			{
