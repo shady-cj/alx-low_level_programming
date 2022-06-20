@@ -5,6 +5,7 @@
  * @s: The string to be mutated
  * @b: The string to replace it with
  * @n: The number of bytes to replace
+ * Return: the pointer string
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -15,5 +16,5 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
-	return s;
+	return (s);
 }
