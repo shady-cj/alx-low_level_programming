@@ -11,7 +11,7 @@ char *_strpbrk(char *s, char *accept)
 	int i, id;
 
 	id = -1;
-	
+
 	while (*accept != '\0')
 	{
 		i = 0;
@@ -29,5 +29,4 @@ char *_strpbrk(char *s, char *accept)
 		accept++;
 	}
 	return (id == -1 ? NULL : s + id);
-	
 }
