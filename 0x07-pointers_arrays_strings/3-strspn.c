@@ -8,6 +8,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, j;
+
 	i = 0;
 
 	while (s[i] != '\0')
@@ -22,8 +23,6 @@ unsigned int _strspn(char *s, char *accept)
 			j++;
 		}
 		i++;
-		
-		
 	}
 	return (i);
 
