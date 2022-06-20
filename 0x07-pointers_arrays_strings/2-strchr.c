@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 /**
  * _strchr - Returns a pointer to the first
  * occurence of the character c in the
@@ -10,6 +11,8 @@
 
 char *_strchr(char *s, char c)
 {
+	if (c == '\0')
+		return (s + strlen(s));
 	while (*s != '\0')
 	{
 		if (*s == c)
