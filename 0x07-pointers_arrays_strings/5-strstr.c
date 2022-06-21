@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strstr - The function locates a substr
  * ing
@@ -8,45 +9,25 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, f;
+	int index;
 
-	j = 0;
-	f = 0;
-	for (i = 0; needle[i] != '\0'; i++)
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
 	{
-
-		while (haystack[j] != '\0')
+		index = 0;
+		if (haystack[index] == needle[index])
 		{
-			if (f)
-			{
-				if (haystack[j] != needle[i])
-				{
-					i = 0;
-					f = 0;
-				}
-				else
-				{
-					j++;
-				}
-				break;
-			}
-			if (haystack[j] == needle[i])
-			{
-				j++;
-				f = 1;
-				break;
-			}
-			j++;
-		}
-		if (haystack[j] == '\0' && needle[i] != '\0')
-		{
-			return (NULL);
 
+
+		do {
+			if (needle[index + 1] == '\0')
+				return (needle);
+			index++;
+		} while (haystack[index] == needle[index]);
 		}
-	}
-	if (needle[i] == '\0' && f == 1)
-	{
-		return (needle);
+		haystack++;
 	}
 	return (NULL);
 }
