@@ -8,5 +8,7 @@ int main(void)
 		{'y','c'}
 
 	};
-	printf("%c\n", a[4][0]);
+	char *s = (char *) a;
+	printf("%s\n", (char *) a);
+	printf("%c\n", s[0]);
 }
