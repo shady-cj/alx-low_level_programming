@@ -29,5 +29,5 @@ int check_prime(int n, int iter)
 	rem = n % iter;
 	if (rem == 0)
 		return (0);
-	return (check_prime(n, iter - 1);
+	return (check_prime(n, iter - 1));
 }
