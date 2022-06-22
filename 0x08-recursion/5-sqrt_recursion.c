@@ -25,6 +25,7 @@ int find_sqrt(int n, int sugg_root)
 {
 	int div = n / sugg_root;
 	int sq = sugg_root * sugg_root;
+
 	if (sugg_root > 100000)
 		sugg_root = sugg_root / 2;
 	if (div < sugg_root)
