@@ -1,3 +1,4 @@
+int check_prime(int, int);
 /**
  * is_prime_number - a function that checks
  * of a number is a prime number
@@ -11,5 +12,23 @@ int is_prime_number(int n)
 	int p;
 	if (n < 0 || n == 1)
 		return (0);
-	p = n % is_print_number(n - 1);
+	return (n, n - 1);
+}
+
+/**
+ * check_prime - verifies if it's prime
+ * @n: The number
+ * @iter: The numbers to check with
+ * Return: 1 or 0 if it's prime or not
+ */
+int check_prime(int n, int iter)
+{
+	int rem;
+
+	if (iter == 1)
+		return (1);
+	rem = n % iter;
+	if (rem == 0)
+		return (0);
+	return (check_prime(n, iter - 1);
 }
