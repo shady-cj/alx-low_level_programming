@@ -1,4 +1,4 @@
-
+#include <string.h>
 /**
  * wildcmp - a function that compares 2
  * strings
