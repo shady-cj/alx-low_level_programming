@@ -2,13 +2,12 @@
 
 # ARGC 
 
-    Argc refers to the argument count of a command line argument including the programname
-    This count is always 1 or greater due to the fact that you always have to provide
-    your program name to compile any program. 
-
-    One of the good use cases of argc is to provide the length of the array(argv, discussed below) in order to iterate/loop through
-    It can also be used to determine or detect in our program if a user inputted some additional arguments or flags
-    which can serve as a drive for our main program to work in a particular fashion.
+Argc refers to the argument count of a command line argument including the programname
+This count is always 1 or greater due to the fact that you always have to provide
+your program name to compile any program. 
+One of the good use cases of argc is to provide the length of the array(argv, discussed below) in order to iterate/loop through
+It can also be used to determine or detect in our program if a user inputted some additional arguments or flags
+which can serve as a drive for our main program to work in a particular fashion.
 
 
 
