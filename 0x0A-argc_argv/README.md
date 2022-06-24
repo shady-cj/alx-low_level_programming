@@ -13,18 +13,18 @@ which can serve as a drive for our main program to work in a particular fashion.
 
 # ARGV
 
-    Argc refers to the "argument values", or to some "argument vectors".  
-    This is declared of in form of "*argv[]" or some "**argv" which simply means an array of strings in c
-    This array consists of the list of arguments passed into a program on the command line when calling the program
-    This list includes the command name which can be found at argv[0], remember it is a list so the yes the first index is 0.
-    And the last index is argc(argument count discussed above) - 1, meaning if we try to access the array at index argc(length of the array) we get a NULL value
-    This set of arrays are useful to pass in some instructions to our program in order for them to function in a particular fashion
+Argc refers to the __argument values__, or to some __argument vectors__.  
+This is declared of in form of "*argv[]" or some "**argv" which simply means an array of strings in c
+This array consists of the list of arguments passed into a program on the command line when calling the program
+This list includes the command name which can be found at argv[0], remember it is a list so the yes the first index is 0.
+And the last index is argc(argument count discussed above) - 1, meaning if we try to access the array at index argc(length of the array) we get a NULL value
+This set of arrays are useful to pass in some instructions to our program in order for them to function in a particular fashion
 
 
 
 # Conclusion.
 
-     We can think of those 2 arguments as a way of passing instructions to a program for then to work in a particular fashion
-     A simple scenario to illustrate this is, for instance when we want to cook we get a pot, gas cooker(or whatever means you use to cook)
-     water, The pot and gas cooker will act as our program and then whatever the output of that program(The cooking) will be would be based on what we passed into it.
+We can think of those 2 arguments as a way of passing instructions to a program for then to work in a particular fashion
+A simple scenario to illustrate this is, for instance when we want to cook we get a pot, gas cooker(or whatever means you use to cook)
+water, The pot and gas cooker will act as our program and then whatever the output of that program(The cooking) will be would be based on what we passed into it.
 
