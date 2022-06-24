@@ -1,7 +1,6 @@
- #ARGC
-#ARGV
+# ARGC AND ARGV
 
-#ARGC 
+# ARGC 
 
     Argc refers to the argument count of a command line argument including the programname
     This count is always 1 or greater due to the fact that you always have to provide
@@ -13,7 +12,7 @@
 
 
 
-#ARGV
+# ARGV
 
     Argc refers to the <i>argument values</i>, or to some <i>argument vectos</i>.  
     This is declared of in form of <b>*argv[]</b> or some <b>**argv</b> which simply means an array of strings in c
