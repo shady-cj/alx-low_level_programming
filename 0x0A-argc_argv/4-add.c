@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-
+#include <stdlib.h>
 /**
  * main - The entry point and it prints the sum of all the positive
  * numbers passed into the command line
@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
 	}
 	i = 1;
 	sum = 0;
-	
+
 	while (i < argc)
 	{
 		str = argv[i];
-		while(*str != '\0')
+		while (*str != '\0')
 		{
 			if (isalpha(*str))
 			{

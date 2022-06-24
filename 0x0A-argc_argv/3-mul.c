@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - The entry point and it prints the multiplication of
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 		puts("Error");
 		return (1);
 	}
-	
+
 	mul = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", mul);
 	return (0);
