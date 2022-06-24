@@ -14,7 +14,7 @@
 
 # ARGV
 
-    Argc refers to the **argument values**, or to some **argument vectos**.  
+    Argc refers to the __argument values__, or to some __argument vectors__.  
     This is declared of in form of ***argv[]** or some ****argv** which simply means an array of strings in c
     This array consists of the list of arguments passed into a program on the command line when calling the program
     This list includes the command name which can be found at argv[0], remember it is a list so the yes the first index is 0.
