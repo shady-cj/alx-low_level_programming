@@ -1,7 +1,7 @@
 #include <stdlib.h>
 /**
- * create_array - A function that creates dynamic memory allocation for chars of
- * size @size
+ * create_array - A function that creates dynamic memory allocation
+ * for chars of size @size
  * @size: The size of the char to be created in memory
  * @c: The character to initialize with
  * Return: A pointer to the character
@@ -14,7 +14,6 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
-	
 	s = malloc(sizeof(char) * size);
 	if (s == NULL)
 		return (NULL);
