@@ -13,6 +13,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len, slen, len0, i, j;
 	char *s;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	len = (int) strlen(s1);
 	len0 = (int) strlen(s2);
 
