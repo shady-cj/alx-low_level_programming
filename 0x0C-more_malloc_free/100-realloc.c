@@ -30,6 +30,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 	}
 	if (ret == NULL)
+<<<<<<< HEAD
+=======
+		return (NULL);
+	ptr2 = ptr;
+	filler = ret;
+	while(*ptr2)
+>>>>>>> parent of 707d177 (implementing realloc clone)
 	{
 		free(ptr);
 		return (NULL);
