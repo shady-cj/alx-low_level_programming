@@ -31,7 +31,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (ret == NULL)
 	{
-		free(ptr)
+		free(ptr);
 		return (NULL);
 	}
 	filler = ret;
