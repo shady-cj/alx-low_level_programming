@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * init_dog - a function that initializes a variable off type dog
  * @d: The variable holding the user defined data type
