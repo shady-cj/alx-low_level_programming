@@ -26,4 +26,8 @@ void print_dog(struct dog *d)
 			printf("Age: %f\n", a);
 		printf("Owner: %s\n", o);
 	}
+	else
+	{
+		return;
+	}
 }
