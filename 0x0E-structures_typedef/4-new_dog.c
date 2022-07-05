@@ -18,17 +18,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(my_dog);
 		return (NULL);
 	}
-	my_dog->name = malloc(sizeof(char *) *
+	my_dog->name = malloc(sizeof(char) *
 			strlen(name) + 1);
 	if (my_dog->name == NULL)
 	{
 		free(my_dog);
 		return (NULL);
 	}
-	my_dog->owner = malloc(sizeof(char *) *
+	my_dog->owner = malloc(sizeof(char) *
 			strlen(owner) + 1);
 	if (my_dog->owner == NULL)
 	{
+		free(my_dog->name);
 		free(my_dog);
 		return (NULL);
 	}
