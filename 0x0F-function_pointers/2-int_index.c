@@ -4,6 +4,7 @@
  * @array: The array of integers to search
  * @size: The number of integers in the array
  * @cmp: The helper function
+ * Return: the index of the first occurence of the int else -1
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -12,7 +13,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	if (size <= 0 || array == NULL || cmp == NULL)
 		return (-1);
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		if (cmp(array[i]))
 			return (i);
