@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 /**
  * print_strings - The function prints series of strings
  * passed in separated by a separator.
