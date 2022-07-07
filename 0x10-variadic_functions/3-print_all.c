@@ -41,6 +41,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				cs = va_arg(var, char *);
+				cs = cs == NULL ? "(nil)" : cs;
 				printf("%s%s", cs, glob);
 				break;
 		}
