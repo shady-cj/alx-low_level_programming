@@ -34,5 +34,4 @@ int main(int argc, char *argv[])
 	value = f(a1, a2);
 	printf("%d\n", value);
 	return (0);
-	
 }
