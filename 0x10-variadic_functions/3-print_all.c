@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 'f':
 				cf = va_arg(var, double);
-				printf("%lf%s", cf, glob);
+				printf("%f%s", cf, glob);
 				break;
 			case 's':
 				cs = va_arg(var, char *);
