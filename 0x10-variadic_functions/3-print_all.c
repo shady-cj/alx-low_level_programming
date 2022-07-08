@@ -10,7 +10,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int len, i, ci, cc;
+	int len, i = 0, ci, cc;
 	double cf;
 	char *cs, *glob;
 	va_list var;
@@ -21,7 +21,6 @@ void print_all(const char * const format, ...)
 		return;
 	}
 	len = (int) strlen(format);
-	i = 0;
 	va_start(var, format);
 	while (i < len)
 	{
