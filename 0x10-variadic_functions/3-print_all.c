@@ -16,6 +16,8 @@ void print_all(const char * const format, ...)
 	char *cs, *glob;
 	va_list var;
 
+	if (format == NULL)
+		return;
 	len = (int) strlen(format);
 
 	i = 0;
