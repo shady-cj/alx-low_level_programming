@@ -17,7 +17,10 @@ void print_all(const char * const format, ...)
 	va_list var;
 
 	if (format == NULL)
-		format = "";
+	{
+		printf("\n");
+		return;
+	}
 	len = (int) strlen(format);
 
 	i = 0;
