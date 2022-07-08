@@ -29,7 +29,7 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				cc = va_arg(var, int);
-				if (c != '')
+				if (cc != ' ')
 					printf("%c%s", cc, glob);
 				break;
 			case 'i':
