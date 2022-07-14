@@ -1,10 +1,10 @@
 #include <stdio.h>
-void before_main() __attribute__((constructor));
+void before_main(void) __attribute__((constructor));
 /**
  * before_main - This function executes before the main function
  * Return: void
  */
-void before_main()
+void before_main(void)
 {
 	printf("You're beat! and yet, "
 			"you must allow,\n"
