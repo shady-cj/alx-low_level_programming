@@ -5,14 +5,14 @@
  * @head: The pointer to the head
  * Return: void
  */
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *ptr = NULL;
 	listint_t *tmp = NULL;
 
 	if (head == NULL)
 		return;
-	ptr = head;
+	ptr = *head;
 
 	while (ptr != NULL)
 	{
@@ -21,5 +21,5 @@ void free_listint2(listint_t *head)
 		ptr = tmp;
 	}
 	free(ptr);
-	head = NULL;
+	*head = NULL;
 }
