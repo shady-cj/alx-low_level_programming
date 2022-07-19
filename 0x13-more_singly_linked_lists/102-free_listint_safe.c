@@ -30,6 +30,7 @@ size_t free_listint_safe(listint_t **h)
 		{
 			hold = ptr->next;
 			free(ptr);
+			ptr = NULL;
 			ptr = hold;
 		}
 		else
@@ -41,6 +42,7 @@ size_t free_listint_safe(listint_t **h)
 	free(ptr);
 	ptr = NULL;
 	*h = ptr;
+	free_address(&addr_head);
 	return (count);
 }
 
