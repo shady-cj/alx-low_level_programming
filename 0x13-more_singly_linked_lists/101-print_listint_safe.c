@@ -36,6 +36,7 @@ size_t print_listint_safe(const listint_t *head)
 		ptr = ptr->next;
 		count++;
 	}
+	free_address(&addr_head);
 	return (count);
 }
 
@@ -51,21 +52,13 @@ int check_add_address(struct address **addr_head, size_t ptr)
 	struct address *addr_ptr = NULL;
 	struct address *addr_new = NULL;
 
-
 	addr_ptr = *addr_head;
 	while (addr_ptr->link != NULL)
 	{
 		if (addr_ptr->addr == ptr ||
 			addr_ptr->link->addr == ptr)
 		{
-			addr_ptr = *addr_head;
-			while (addr_ptr != NULL)
-			{
-				addr_new = addr_ptr->link;
-				free(addr_ptr);
-				addr_ptr = addr_new;
-
-			}
+			free_address(addr_head);
 			return (1);
 		}
 
@@ -79,4 +72,28 @@ int check_add_address(struct address **addr_head, size_t ptr)
 	addr_ptr->link = addr_new;
 	return (0);
 
+}
+
+/**
+ * free_address - Frees the address of the previously allocated linked
+ * lists
+ * @addr_head: The head node address
+ * Return: void
+ */
+void free_address(struct address **addr_head)
+{
+	struct address *addr_ptr = NULL;
+	struct address *addr_hold = NULL;
+
+	if (*addr_head == NULL)
+		return;
+	addr_ptr = *addr_head;
+
+	while (addr_ptr != NULL)
+	{
+		addr_hold = addr_ptr->link;
+		free(addr_ptr);
+		addr_ptr = addr_hold;
+	}
+	*addr_head = addr_ptr;
 }
