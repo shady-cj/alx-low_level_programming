@@ -1,15 +1,8 @@
 #include "lists.h"
-/**
- * struct address - The structure is linked list that keeps track of
- * loops in an existing linked list
- * @addr: The address of all d elements
- * @link: The links to the next node
- */
-struct address
-{
-	size_t addr;
-	struct address *link;
-};
+
+
+int check_add_address(struct address **addr_head, size_t ptr);
+
 /**
  * print_listint_safe - A function that prints a listint_t
  * linked list (safe version)
@@ -18,10 +11,7 @@ struct address
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	struct address *addr_head = NULL;
-	struct address *addr_ptr = NULL;
-	struct address *addr_hold = NULL;
-	struct address *addr_new = NULL;
+	struct address *addr_head = NULL;	
 	size_t count = 0;
 	const listint_t *ptr = NULL;
 	int found_loop = 0;
@@ -31,40 +21,14 @@ size_t print_listint_safe(const listint_t *head)
 		exit(98);
 	addr_head->addr = 0;
 	addr_head->link = NULL;
-
 	if (head == NULL)
 		exit(98);
 	ptr = head;
 	while (ptr != NULL)
 	{
-		addr_ptr = addr_head;
-		while (addr_ptr->link != NULL)
-		{
-			if (addr_ptr->addr == (unsigned long int) ptr ||
-				addr_ptr->link->addr == (unsigned long int) ptr)
-			{
-				addr_ptr = addr_head;
-				while (addr_ptr != NULL)
-				{
-					addr_hold = addr_ptr->link;
-					free(addr_ptr);
-					addr_ptr = addr_hold;
-
-				}
-				found_loop = 1;
-				break;
-			}
-
-			addr_ptr = addr_ptr->link;
-		}
+		found_loop = check_add_address(&addr_head, (size_t) ptr);
 		if (!found_loop)
 		{
-			addr_new = malloc(sizeof(struct address));
-			if (addr_new == NULL)
-				exit(98);
-			addr_new->addr = (unsigned long int) ptr;
-			addr_new->link = NULL;
-			addr_ptr->link = addr_new;
 			printf("[%p] %d\n", (void *) ptr, ptr->n);
 		}
 		else
@@ -76,4 +40,46 @@ size_t print_listint_safe(const listint_t *head)
 		count++;
 	}
 	return (count);
+}
+
+/**
+ * check_add_address - This is an helper function that checks if an address
+ * is registered if not then it adds the address
+ * @addr_head: The head node to the address struct
+ * @ptr: The addresses;
+ * Return: 1 if found and 0 if not
+ */
+int check_add_address(struct address **addr_head, size_t ptr)
+{
+	struct address *addr_ptr = NULL;
+	struct address *addr_new = NULL;
+
+
+	addr_ptr = *addr_head;
+	while (addr_ptr->link != NULL)
+	{
+		if (addr_ptr->addr == ptr ||
+			addr_ptr->link->addr == ptr)
+		{
+			addr_ptr = *addr_head;
+			while (addr_ptr != NULL)
+			{
+				addr_new = addr_ptr->link;
+				free(addr_ptr);
+				addr_ptr = addr_new;
+
+			}
+			return (1);
+		}
+
+		addr_ptr = addr_ptr->link;
+	}
+	addr_new = malloc(sizeof(struct address));
+	if (addr_new == NULL)
+		exit(98);
+	addr_new->addr = (unsigned long int) ptr;
+	addr_new->link = NULL;
+	addr_ptr->link = addr_new;
+	return (0);
+
 }

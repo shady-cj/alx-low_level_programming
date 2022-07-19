@@ -13,6 +13,17 @@ typedef struct listint_s
 	int n;
 	struct listint_s *next;
 } listint_t;
+/**
+ * struct address - The structure is linked list that keeps track of
+ * loops in an existing linked list
+ * @addr: The address of all d elements
+ * @link: The links to the next node
+ */
+struct address
+{
+	size_t addr;
+	struct address *link;
+};
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
