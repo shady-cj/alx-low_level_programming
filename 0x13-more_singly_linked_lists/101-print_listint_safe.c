@@ -11,7 +11,7 @@ int check_add_address(struct address **addr_head, size_t ptr);
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	struct address *addr_head = NULL;	
+	struct address *addr_head = NULL;
 	size_t count = 0;
 	const listint_t *ptr = NULL;
 	int found_loop = 0;
