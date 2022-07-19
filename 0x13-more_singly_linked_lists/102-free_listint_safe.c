@@ -22,9 +22,10 @@ size_t free_listint_safe(listint_t **h)
 	if (*h == NULL)
 		exit(98);
 	ptr = *h;
+	found_loop = check_add_address(&addr_head, (size_t) ptr);
 	while (ptr != NULL)
 	{
-		found_loop = check_add_address(&addr_head, (size_t) ptr);
+		found_loop = check_add_address(&addr_head, (size_t) ptr->next);
 		if (!found_loop)
 		{
 			hold = ptr->next;
@@ -35,10 +36,11 @@ size_t free_listint_safe(listint_t **h)
 		{
 			break;
 		}
-		ptr = ptr->next;
 		count++;
 	}
-	*h = NULL;
+	free(ptr);
+	ptr = NULL;
+	*h = ptr;
 	return (count);
 }
 
