@@ -8,41 +8,40 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	struct address *addr_head = NULL;
 	size_t count = 0;
 	listint_t *ptr = NULL;
 	listint_t *hold = NULL;
-	int found_loop = 0;
+	size_t address = 0;
 
-	addr_head = malloc(sizeof(struct address));
-	if (addr_head == NULL)
-		exit(98);
-	addr_head->addr = 0;
-	addr_head->link = NULL;
 	if (*h == NULL)
-		exit(98);
+		return (0);
+
+	address = find_loop(*head);
 	ptr = *h;
-	found_loop = check_add_address(&addr_head, (size_t) ptr);
-	while (ptr != NULL)
+
+	if (address == 0)
 	{
-		found_loop = check_add_address(&addr_head, (size_t) ptr->next);
-		if (!found_loop)
+		while (ptr != NULL)
 		{
 			hold = ptr->next;
 			free(ptr);
-			ptr = NULL;
 			ptr = hold;
+			count++;
 		}
-		else
+	}
+	else
+	{
+		while ((size_t ptr) != address)
 		{
-			break;
+			hold = ptr->next;
+			free(ptr);
+			ptr = hold;
+			count++;
 		}
+		free(ptr);
+		ptr = NULL;
 		count++;
 	}
-	free(ptr);
-	ptr = NULL;
-	*h = ptr;
-	free_address(&addr_head);
 	return (count);
 }
 

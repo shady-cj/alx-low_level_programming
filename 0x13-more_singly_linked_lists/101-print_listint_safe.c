@@ -44,7 +44,7 @@ size_t print_listint_safe(const listint_t *head)
  * find_loop - This helper functions helps to check if a loop exists in
  * a linked list using floyd's cycle finding algorithm
  * @head: The head node
- * Return: Returns the address of the end node if there is a loop else
+ * Return: the address of the end node if there is a loop else
  * returns 0
  */
 size_t find_loop(const listint_t *head)
