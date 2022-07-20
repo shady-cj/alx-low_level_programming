@@ -1,5 +1,6 @@
 #include "lists.h"
-
+int check_add_address(struct address **addr_head, size_t ptr);
+void free_address(struct address **addr_head);
 /**
  * print_listint_safe - A function that prints a listint_t
  * linked list (safe version)
