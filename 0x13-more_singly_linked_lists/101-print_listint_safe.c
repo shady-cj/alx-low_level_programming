@@ -8,92 +8,77 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	struct address *addr_head = NULL;
 	size_t count = 0;
 	const listint_t *ptr = NULL;
-	int found_loop = 0;
-
-	addr_head = malloc(sizeof(struct address));
-	if (addr_head == NULL)
-		exit(98);
-	addr_head->addr = 0;
-	addr_head->link = NULL;
+	size_t address = 0;
 	if (head == NULL)
 		exit(98);
+
 	ptr = head;
-	while (ptr != NULL)
+	address = find_loop(head);
+	if (address == 0)
 	{
-		found_loop = check_add_address(&addr_head, (size_t) ptr);
-		if (!found_loop)
+		while (ptr != NULL)
 		{
 			printf("[%p] %d\n", (void *) ptr, ptr->n);
+			ptr = ptr->next;
+			count++;
 		}
-		else
-		{
-			printf("-> [%p] %d\n", (void *) ptr, ptr->n);
-			break;
-		}
-		ptr = ptr->next;
-		count++;
 	}
-	free_address(&addr_head);
+	else
+	{
+		while ((size_t) ptr != address)
+		{
+			printf("[%p] %d\n", (void *) ptr, ptr->n);
+			ptr = ptr->next;
+			count++;
+		}
+		printf("[%p] %d\n", (void *) ptr, ptr->n);
+		ptr = ptr->next;
+		printf("-> [%p] %d\n", (void *) ptr, ptr->n);
+	}
 	return (count);
 }
-
 /**
- * check_add_address - This is an helper function that checks if an address
- * is registered if not then it adds the address
- * @addr_head: The head node to the address struct
- * @ptr: The addresses;
- * Return: 1 if found and 0 if not
+ * find_loop - This helper functions helps to check if a loop exists in
+ * a linked list using floyd's cycle finding algorithm
+ * @head: The head node
+ * Return: Returns the address of the end node if there is a loop else
+ * returns 0
  */
-int check_add_address(struct address **addr_head, size_t ptr)
+size_t find_loop(const listint_t *head)
 {
-	struct address *addr_ptr = NULL;
-	struct address *addr_new = NULL;
+	const listint_t *hare = NULL;
+	const listint_t *tortoise = NULL;
+	const listint_t *last_addr = NULL;
 
-	addr_ptr = *addr_head;
-	while (addr_ptr->link != NULL)
+	if (head->next == NULL)
 	{
-		if (addr_ptr->addr == ptr ||
-			addr_ptr->link->addr == ptr)
+		return (0);
+	}
+	hare = head->next->next;
+	tortoise = head->next;
+	while (hare != NULL)
+	{
+		if (tortoise == hare)
 		{
-			free_address(addr_head);
-			return (1);
+			tortoise = head;
+			while (tortoise != hare)
+			{
+				tortoise = tortoise->next;
+				hare = hare->next;
+			}
+			tortoise = tortoise->next;
+
+			while (tortoise != hare)
+			{
+				last_addr = tortoise;
+				tortoise = tortoise->next;
+			}
+			return ((size_t) last_addr);
 		}
-
-		addr_ptr = addr_ptr->link;
+		hare = (hare->next)->next;
+		tortoise = tortoise->next;
 	}
-	addr_new = malloc(sizeof(struct address));
-	if (addr_new == NULL)
-		exit(98);
-	addr_new->addr = (unsigned long int) ptr;
-	addr_new->link = NULL;
-	addr_ptr->link = addr_new;
 	return (0);
-
-}
-
-/**
- * free_address - Frees the address of the previously allocated linked
- * lists
- * @addr_head: The head node address
- * Return: void
- */
-void free_address(struct address **addr_head)
-{
-	struct address *addr_ptr = NULL;
-	struct address *addr_hold = NULL;
-
-	if (*addr_head == NULL)
-		return;
-	addr_ptr = *addr_head;
-
-	while (addr_ptr != NULL)
-	{
-		addr_hold = addr_ptr->link;
-		free(addr_ptr);
-		addr_ptr = addr_hold;
-	}
-	*addr_head = addr_ptr;
 }

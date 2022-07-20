@@ -38,6 +38,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
 int check_add_address(struct address **addr_head, size_t ptr);
 void free_address(struct address **addr_head);
+size_t find_loop(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 #endif
