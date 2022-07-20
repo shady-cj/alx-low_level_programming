@@ -16,7 +16,7 @@ size_t free_listint_safe(listint_t **h)
 	if (*h == NULL)
 		return (0);
 
-	address = find_loop(*head);
+	address = find_loop(*h);
 	ptr = *h;
 
 	if (address == 0)
@@ -31,7 +31,7 @@ size_t free_listint_safe(listint_t **h)
 	}
 	else
 	{
-		while ((size_t ptr) != address)
+		while ((size_t) ptr != address)
 		{
 			hold = ptr->next;
 			free(ptr);
@@ -42,6 +42,7 @@ size_t free_listint_safe(listint_t **h)
 		ptr = NULL;
 		count++;
 	}
+	*h = ptr;
 	return (count);
 }
 
