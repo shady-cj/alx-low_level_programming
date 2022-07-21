@@ -11,11 +11,11 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num = 0;
 	int bin;
-	int len = (int) strlen(b), i,j = 0;
+	int len = 0, i = 0, j = 0;
 
 	if (b == NULL)
-		return (num);
-
+		return (0);
+	len = (int) strlen(b);
 	i = len - 1;
 	while (i >= 0)
 	{
@@ -31,7 +31,7 @@ unsigned int binary_to_uint(const char *b)
 }
 
 /**
- * pow - performs exponential operation
+ * _pow - performs exponential operation
  * @x: The base number
  * @y: The power
  * Return: The result of x raise to the power of y
@@ -41,7 +41,7 @@ unsigned int _pow(int x, int y)
 {
 	int i = 0;
 	int num = 1;
-	
+
 	if (y == 0)
 		return (num);
 	while (i < y)
@@ -62,6 +62,7 @@ unsigned int _pow(int x, int y)
 int convert_to_binary_num(char c)
 {
 	int num = (int) c - 48;
+
 	if (num > 1 || num < 0)
 		return (2);
 	return (num);
