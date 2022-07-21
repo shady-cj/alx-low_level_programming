@@ -35,5 +35,4 @@ void print_binary_rec(unsigned long int n)
 	{
 		_putchar(0 + '0');
 	}
-	return;
 }
