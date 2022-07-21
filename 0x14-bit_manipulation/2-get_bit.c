@@ -35,7 +35,7 @@ int get_bit_index(size_t n, unsigned int index)
 		k >>= 1;
 		i++;
 	}
-	if (i < index)
+	if (i < index || k == 0)
 		return (-1);
 	j = (k & 1) ? 1 : 0;
 	return (j);
