@@ -1,5 +1,4 @@
 #include "main.h"
-int convert_to_binary_num(char c);
 /**
  * binary_to_uint - This function takes in a binary and converts
  * to an unsigned int
