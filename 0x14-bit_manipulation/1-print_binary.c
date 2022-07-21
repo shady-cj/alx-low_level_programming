@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 {
 	if (n == 0)
 	{
-		putchar(0 + '0');
+		_putchar(0 + '0');
 		return;
 	}
 	print_binary_rec(n);
@@ -29,11 +29,11 @@ void print_binary_rec(unsigned long int n)
 	print_binary_rec(n >> 1);
 	if (n & 1)
 	{
-		putchar(1 + '0');
+		_putchar(1 + '0');
 	}
 	else
 	{
-		putchar(0 + '0');
+		_putchar(0 + '0');
 	}
 	return;
 }
