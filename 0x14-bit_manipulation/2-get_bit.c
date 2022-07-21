@@ -11,6 +11,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	if (n == 0 && index != 0)
 		return (-1);
+	if (n == 1 && index != 0)
+		return (-1);
 	return (get_bit_index(n, index));
 
 }
@@ -19,7 +21,7 @@ int get_bit(unsigned long int n, unsigned int index)
  * get_bit_index - This is the helper function that gets the
  * bit at index @index
  * @index: The index to get to bit
- * @i: The iterator for the function
+ * @n: The decimal we are working with
  * Return: The bit at the index
  */
 int get_bit_index(size_t n, unsigned int index)
