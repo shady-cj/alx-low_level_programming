@@ -29,6 +29,8 @@ int get_bit_index(size_t n, unsigned int index)
 	unsigned int i = 0, j;
 	size_t k = n;
 
+	if (n == 0 && index == 0)
+		return (0);
 	while (i < index && k > 0)
 	{
 
