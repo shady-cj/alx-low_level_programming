@@ -27,8 +27,8 @@ listint_t *find_listint_loop(listint_t *head)
 			}
 			return (tortoise);
 		}
-
-		hare = hare->next->next;
+		if (hare->next != NULL)
+			hare = hare->next->next;
 		tortoise = tortoise->next;
 	}
 	return (NULL);
