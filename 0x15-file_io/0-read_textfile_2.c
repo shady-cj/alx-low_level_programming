@@ -11,6 +11,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t pos = 0;
+	size_t len = letters;
 	int fd;
 	ssize_t ret, w;
 	char *str = calloc(letters, sizeof(char));
@@ -21,20 +23,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		free(str);
 		return (0);
-	}
+	}	
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
 		free (str);
 		return (0);
 	}
-	ret = read(fd, str, letters);
-	w = write(STDOUT_FILENO, str, ret);
-	if (ret == -1 || w == -1 || w != ret)
+	while (len != 0 && (ret = read(fd, str + pos, len)) != 0)
 	{
-		free (str);
-		return (0);
+		if (ret == -1)
+		{
+			if (errno == EINTR)
+				continue;
+			return (0);
+		}
+		len -= ret;
+		pos += ret;
 	}
+	printf("%s", str);
 	if (close(fd) == -1)
 	{
 		free(str);
