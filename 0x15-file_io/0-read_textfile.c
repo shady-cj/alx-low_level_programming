@@ -26,6 +26,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		if (ret == -1)
 		{
+			if (errno == EINTR)
+				continue;
 			return (0);
 		}
 		len -= ret;
