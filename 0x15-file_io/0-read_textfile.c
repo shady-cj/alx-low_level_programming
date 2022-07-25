@@ -14,16 +14,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t pos = 0;
 	size_t len = letters;
 	int fd;
-	ssize_t ret;
+	ssize_t ret, w;
 	char *str = calloc(letters, sizeof(char));
-	
+
 	if (str == NULL)
 		return (0);
 	if (filename == NULL)
+	{
+		free(str);
 		return (0);
+	}	
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
+	{
+		free (str);
 		return (0);
+	}
 	while (len != 0 && (ret = read(fd, str + pos, len)) != 0)
 	{
 		if (ret == -1)
@@ -32,12 +38,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 				continue;
 			return (0);
 		}
+		w = write(STDOUT_FILENO, str, ret);
+		if (w != ret)
+		{
+			free(str);
+			return (0);
+		}
 		len -= ret;
 		pos += ret;
 	}
 	printf("%s", str);
-
 	if (close(fd) == -1)
+	{
+		free(str);
 		return (0);
-	return (pos);
+	}
+	return (w);
 }
