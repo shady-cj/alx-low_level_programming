@@ -8,6 +8,7 @@
 char *buff_str(int bytes, char *filename)
 {
 	char *buff = malloc(sizeof(char) * bytes);
+
 	if (buff == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
@@ -25,6 +26,7 @@ char *buff_str(int bytes, char *filename)
 void close_file(int fd)
 {
 	int c = close(fd);
+
 	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
@@ -63,6 +65,7 @@ int main(int argc, char *argv[])
 	char *buff;
 	int fd_from, fd_to;
 	ssize_t f_read, f_write;
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -78,8 +81,7 @@ int main(int argc, char *argv[])
 	f_read = read(fd_from, buff, 1024);
 	if (f_read == -1)
 		cant_read(argv[1]);
-	do
-	{
+	do {
 		f_write = write(fd_to, buff, f_read);
 		if (f_write == -1)
 			cant_write(argv[2]);
