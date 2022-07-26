@@ -2,14 +2,15 @@
 /**
  * buff_str - This is an helper function that creates a buffer
  * @bytes: The number of bytes to allocate
+ * @filename: The filename incase of error
  * Return: The pointer to the newly allocated buffer
  */
-char *buff_str(int bytes)
+char *buff_str(int bytes, char *filename)
 {
 	char *buff = malloc(sizeof(char) * bytes);
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
 	return (buff);
@@ -26,7 +27,7 @@ void close_file(int fd)
 	int c = close(fd);
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
 }
@@ -73,7 +74,7 @@ int main(int argc, char *argv[])
 	fd_to = creat(argv[2], 0664);
 	if (fd_to == -1)
 		cant_write(argv[2]);
-	buff = buff_str(1024);
+	buff = buff_str(1024, argv[2]);
 	f_read = read(fd_from, buff, 1024);
 	if (f_read == -1)
 		cant_read(argv[1]);
@@ -83,11 +84,12 @@ int main(int argc, char *argv[])
 		if (f_write == -1)
 			cant_write(argv[2]);
 		free(buff);
-		buff = buff_str(1024);
+		buff = buff_str(1024, argv[2]);
 		f_read = read(fd_from, buff, 1024);
 
 	} while (f_read > 0);
 	close_file(fd_from);
 	close_file(fd_to);
+	free(buff);
 	return (0);
 }
