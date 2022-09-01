@@ -180,3 +180,68 @@ julien@ubuntu:~/0x17. Doubly linked lists$ ./j
 1024
 julien@ubuntu:~/0x17. Doubly linked lists$
  ```
+
+### 8. Delete at index
+ **FILES** - 8-delete_dnodeint.c, 8-main.c
+ **TASK** - Write a function that deletes the node at index index of a dlistint_t linked list.
+
+
+ **USAGE**
+ ```
+ julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 8-delete_dnodeint.c -o k
+julien@ubuntu:~/0x17. Doubly linked lists$ ./k
+0
+1
+2
+3
+4
+98
+402
+1024
+-----------------
+0
+1
+2
+3
+4
+402
+1024
+-----------------
+1
+2
+3
+4
+402
+1024
+-----------------
+2
+3
+4
+402
+1024
+-----------------
+3
+4
+402
+1024
+-----------------
+4
+402
+1024
+-----------------
+402
+1024
+-----------------
+1024
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+-----------------
+julien@ubuntu:~/0x17. Doubly linked lists$
+ ```
