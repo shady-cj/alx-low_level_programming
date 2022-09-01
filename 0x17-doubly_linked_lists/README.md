@@ -18,3 +18,16 @@ julien@ubuntu:~/0x17. Doubly linked lists$ ./a
 -> 2 elements
 julien@ubuntu:~/0x17. Doubly linked lists$
  ```
+
+### 1. List length
+
+ **FILES** - 1-dlistint_len.c, 1-main.c
+ **TASK** - Write a function that returns the number of elements in a linked `dlistint_t` list.
+
+ **USAGE**
+ ```
+ julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-dlistint_len.c -o b
+julien@ubuntu:~/0x17. Doubly linked lists$ ./b
+-> 2 elements
+julien@ubuntu:~/0x17. Doubly linked lists$
+ ```
