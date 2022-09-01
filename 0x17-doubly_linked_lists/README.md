@@ -53,3 +53,24 @@ julien@ubuntu:~/0x17. Doubly linked lists$ ./c
 0
 julien@ubuntu:~/0x17. Doubly linked lists$
  ```
+
+### 3. Add node at the end
+ 
+ **FILES** - 3-add_dnodeint_end.c, 3-main.c
+ **TASK** - Write a function that adds a new node at the end of a dlistint_t list.
+
+
+ **USAGE**
+ ```
+ julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-add_dnodeint_end.c 0-print_dlistint.c -o d
+julien@ubuntu:~/0x17. Doubly linked lists$ ./d
+0
+1
+2
+3
+4
+98
+402
+1024
+julien@ubuntu:~/0x17. Doubly linked lists$
+ ```
