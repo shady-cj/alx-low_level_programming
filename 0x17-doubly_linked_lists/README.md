@@ -246,7 +246,12 @@ julien@ubuntu:~/0x17. Doubly linked lists$ ./k
 julien@ubuntu:~/0x17. Doubly linked lists$
  ```
 
-
+### 9. Crackme4
+ **FILES** - 100-password
+ **TASK** - Find the password for crackme4.
+ * Save the password in the file 100-password
+ * Your file should contain the exact password, no new line, no extra space
+ * Hint: The program prints “OK” when the password is correct
 
 ### 10. Palindromes
  **FILES** - 102-result
@@ -254,3 +259,6 @@ julien@ubuntu:~/0x17. Doubly linked lists$
  Find the largest palindrome made from the product of two 3-digit numbers.
  * Save the result in the file 102-result
  * Your file should contain the exact result, no new line, no extra space
+
+
+
