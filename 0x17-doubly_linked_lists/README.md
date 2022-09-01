@@ -147,3 +147,36 @@ julien@ubuntu:~/0x17. Doubly linked lists$ ./i
 sum = 1534
 julien@ubuntu:~/0x17. Doubly linked lists$
  ```
+
+
+
+### 7. Insert at index
+
+ **FILES** - 7-insert_dnodeint.c, 7-main.c
+ **TASK** - Write a function that inserts a new node at a given position.
+
+
+ **USAGE** 
+ ```
+ julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 7-main.c 2-add_dnodeint.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 7-insert_dnodeint.c -o j
+julien@ubuntu:~/0x17. Doubly linked lists$ ./j
+0
+1
+2
+3
+4
+98
+402
+1024
+-----------------
+0
+1
+2
+3
+4
+4096
+98
+402
+1024
+julien@ubuntu:~/0x17. Doubly linked lists$
+ ```
