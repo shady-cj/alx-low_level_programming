@@ -109,3 +109,25 @@ julien@ubuntu:~/0x17. Doubly linked lists$ valgrind ./e
 ==4197== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x17. Doubly linked lists$ 
  ```
+
+### 5. Get node at index
+
+ **FILES** - 5-get_dnodeint.c, 5-main.c
+ **TASK** - Write a function that returns the nth node of a `dlistint_t` linked list.
+
+
+ **USAGE**
+ ```
+ julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 5-get_dnodeint.c -o h
+julien@ubuntu:~/0x17. Doubly linked lists$ ./h
+0
+1
+2
+3
+4
+98
+402
+1024
+98
+julien@ubuntu:~/0x17. Doubly linked lists$
+ ```
