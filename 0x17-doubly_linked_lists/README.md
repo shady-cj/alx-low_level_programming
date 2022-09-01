@@ -131,3 +131,19 @@ julien@ubuntu:~/0x17. Doubly linked lists$ ./h
 98
 julien@ubuntu:~/0x17. Doubly linked lists$
  ```
+
+
+
+### 6. Sum list
+ 
+ **FILES** - 6-sum_dlistint.c, 6-main.c
+ **TASK** - Write a function that returns the sum of all the data (n) of a dlistint_t linked list.
+
+
+ **USAGE**
+ ```
+ julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 6-main.c -std=gnu89 3-add_dnodeint_end.c 4-free_dlistint.c 6-sum_dlistint.c -o i
+julien@ubuntu:~/0x17. Doubly linked lists$ ./i
+sum = 1534
+julien@ubuntu:~/0x17. Doubly linked lists$
+ ```
