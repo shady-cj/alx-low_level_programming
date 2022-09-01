@@ -17,12 +17,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 	size_t i = 0;
 
 	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
 	new->n = n;
 	new->prev = NULL;
 	new->next = NULL;
-	if (new == NULL)
-		return (NULL);	
-	ptr = *h;
+		ptr = *h;
 	while (ptr != NULL)
 	{
 		if (i == idx)
