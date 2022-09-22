@@ -5,6 +5,7 @@
  * into an index within the size of the array
  * @key: The key to be hashed
  * @size: The size of the array
+ * Return: The key index
  */
 
 unsigned long int key_index(const unsigned char *key,
