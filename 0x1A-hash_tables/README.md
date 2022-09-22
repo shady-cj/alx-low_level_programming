@@ -9,7 +9,7 @@ Implementing hash tables in C and looking out how they work, and also ways to pr
 ### 0. >>> ht = {}
 
  **Task**: Write a function that creates a hash table.
-	* Prototype: `hash_table_t * hash_table_create(unsigned long int size);`
+ 	* Prototype: `hash_table_t * hash_table_create(unsigned long int size);`
 	* where size is the size of the array
 	* Returns a pointer to the newly created hash table
 	* If something went wrong, your function should return NULL
@@ -71,8 +71,7 @@ julien@ubuntu:~/0x1A. Hash tables$
 ## 1. djb2
 
  **Task**: Write a hash function implementing the djb2 algorithm.
-
-	* Prototype: `unsigned long int hash_djb2(const unsigned char * str);`
+ 	* Prototype: `unsigned long int hash_djb2(const unsigned char * str);`
 
  **Files**: 1-djb2.c, 1-main.c
 
