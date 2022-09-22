@@ -9,7 +9,7 @@
 void hash_table_delete(hash_table_t *ht)
 {
 	size_t i;
-	hash_node_t *ptr;
+	hash_node_t *ptr, *pl;
 
 	if (ht == NULL)
 		return;
@@ -20,17 +20,18 @@ void hash_table_delete(hash_table_t *ht)
 			ptr = ht->array[i];
 			while (ptr != NULL)
 			{
-				ht->array[i] = ptr->next;
+				pl = ptr->next;
 				free(ptr->key);
 				free(ptr->value);
 				free(ptr);
-				ptr = ht->array[i];
+				ptr = pl;
 			}
-			free(ht->array[i]);
-			ht->array[i] = NULL;
+			free(pl);
+			pl = NULL;
 			
 		}
 	}
+	free(ht->array);
 	free(ht);
 	ht = NULL;
 }
