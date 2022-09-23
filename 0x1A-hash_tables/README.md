@@ -413,7 +413,7 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 **Task** - For this task, please:
 
-* Read PHP Internals Book: HashTable
+* Read [PHP Internals Book: HashTable](https://alx-intranet.hbtn.io/rltoken/SIdpN9PE_9aYBCHUGPX-fw)
 * Use the same hash function
 * Use these data structures:
 
