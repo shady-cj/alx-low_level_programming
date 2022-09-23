@@ -1,11 +1,11 @@
 #include "hash_tables.h"
 
 shash_node_t *store_values(shash_node_t *head_ptr, const char *key,
-                const char *value);
+		const char *value);
 shash_node_t *check_and_update(shash_table_t *ht, shash_node_t *head_ptr,
-                const char *key, const char *value, size_t i);
-shash_node_t *update_linked_list(shash_table_t **ht, const char *key,
-                shash_node_t *head_ptr);
+		const char *key, const char *value, size_t i);
+shash_node_t *update_linked_list(shash_table_t *ht, const char *key,
+		shash_node_t *head_ptr);
 /**
  * shash_table_create - Creates a new hash table for the sorted
  * hash table
@@ -61,7 +61,7 @@ int shash_table_set(shash_table_t *ht, const char *key,
 	if (head_ptr == NULL)
 		return (1);
 	head_ptr = store_values(head_ptr, key, value);
-	head_ptr = update_linked_list(&ht, key, head_ptr);
+	head_ptr = update_linked_list(ht, key, head_ptr);
 	ht->array[index] = head_ptr;
 	return (1);
 }
@@ -76,12 +76,12 @@ int shash_table_set(shash_table_t *ht, const char *key,
  * Return: The head pointer
  */
 
-shash_node_t *update_linked_list(shash_table_t **ht, const char *key,
+shash_node_t *update_linked_list(shash_table_t *ht, const char *key,
 		shash_node_t *head_ptr)
 {
 	shash_node_t *ptr = NULL, *ptr_prev = NULL;
 
-	ptr = (*ht)->shead;
+	ptr = ht->shead;
 	while (ptr != NULL)
 	{
 		if (strcmp(key, ptr->key) < 0)
@@ -89,7 +89,7 @@ shash_node_t *update_linked_list(shash_table_t **ht, const char *key,
 			if (ptr_prev != NULL)
 				ptr_prev->snext = head_ptr;
 			else
-				(*ht)->shead = head_ptr;
+				ht->shead = head_ptr;
 			head_ptr->sprev = ptr_prev;
 			head_ptr->snext = ptr;
 			ptr->sprev = head_ptr;
@@ -103,10 +103,10 @@ shash_node_t *update_linked_list(shash_table_t **ht, const char *key,
 		if (ptr_prev != NULL)
 			ptr_prev->snext = head_ptr;
 		else
-			(*ht)->shead = head_ptr;
+			ht->shead = head_ptr;
 		head_ptr->sprev = ptr_prev;
 		head_ptr->snext = ptr;
-		(*ht)->stail = head_ptr;
+		ht->stail = head_ptr;
 	}
 	return (head_ptr);
 }
@@ -126,6 +126,7 @@ shash_node_t *check_and_update(shash_table_t *ht, shash_node_t *head_ptr,
 		const char *key, const char *value, size_t i)
 {
 	shash_node_t *ptr = NULL;
+
 	if (ht->array[i] != NULL)
 	{
 		ptr = ht->array[i];
