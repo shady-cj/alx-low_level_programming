@@ -18,7 +18,7 @@ Requirements:
     * The all rule builds your executable
 * variables: none
 
-
+**File** - 0-Makefile
 
 ```
 julien@ubuntu:~/0x1C. Makefiles$ make -f 0-Makefile 
@@ -50,4 +50,26 @@ j#0000000000000k?qwgdC=]4#0000000000000
 j#00000000000000w]+]++qw#00000000000000
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 julien@ubuntu:~/0x1C. Makefiles$ 
+```
+
+
+### 1. make -f 1-Makefile
+
+Requirements:
+
+* name of the executable: school
+* rules: all
+    * The all rule builds your executable
+* variables: CC, SRC
+    * CC: the compiler to be used
+    * SRC: the .c files
+
+**File** - 1-Makefile
+
+```
+julien@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
+gcc main.c school.c -o school
+julien@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
+gcc main.c school.c -o school
+julien@ubuntu:~/0x1C. Makefiles$
 ```
