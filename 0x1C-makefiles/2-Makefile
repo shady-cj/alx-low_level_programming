@@ -8,7 +8,7 @@ all: $(NAME)
 
 school: obj
 	gcc $(OBJ) -o $(NAME)
-	rm $(SRC)
+	rm $(OBJ)
 
 obj:
 	gcc -c $(SRC)
