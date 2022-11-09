@@ -1,0 +1,11 @@
+all: school
+
+
+school: school.o main.o
+	gcc $^ -o $@
+
+school.o:
+	gcc -c school.c
+
+main.o:
+	gcc -c main.c
