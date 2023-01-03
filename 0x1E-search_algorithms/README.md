@@ -124,3 +124,9 @@ Searching in array: 8, 9
 Searching in array: 9
 Found 999 at index: -1
 ```
+
+
+
+### 2. Big O #0
+What is the time complexity (worst case) of a linear search in an array of size n?
+**File** - 2-O
