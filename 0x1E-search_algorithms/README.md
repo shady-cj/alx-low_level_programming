@@ -130,3 +130,8 @@ Found 999 at index: -1
 ### 2. Big O #0
 What is the time complexity (worst case) of a linear search in an array of size n?
 **File** - 2-O
+
+
+### 3. Big O #1
+What is the space complexity (worst case) of an iterative linear search algorithm in an array of size n?
+**File** - 3-O
