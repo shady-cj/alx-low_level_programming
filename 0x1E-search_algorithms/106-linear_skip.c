@@ -18,7 +18,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	int end = 0;
 
 	fwd_ptr = list;
-	while (fwd_ptr)
+	while (fwd_ptr != NULL)
 	{
 		exp_ptr = fwd_ptr->express;
 		bwd_ptr = fwd_ptr;

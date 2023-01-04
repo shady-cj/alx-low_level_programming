@@ -19,7 +19,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t jump = sqrt(size), i;
 
 	fwd_ptr = list;
-	while (fwd_ptr)
+	while (fwd_ptr != NULL)
 	{
 		bwd_ptr = fwd_ptr;
 		for (i = 0; i < jump; i++)
