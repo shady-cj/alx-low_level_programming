@@ -703,3 +703,9 @@ Value checked at index [14] = [76]
 Value checked at index [15] = [99]
 Found 999 at index: (nil)
 ```
+
+
+### 14. Big O #6
+
+What is the time complexity (average case) of a jump search in a singly linked list of size n, using step = sqrt(n)?
+**File** - 107-O
