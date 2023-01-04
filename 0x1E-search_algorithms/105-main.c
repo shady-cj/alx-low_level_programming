@@ -24,7 +24,7 @@ int main(void)
     list = create_list(array, size);
     print_list(list);
 
-    res =  jump_list(list, size, 53);
+    res =  jump_list(NULL, size, 53);
     printf("Found %d at index: %lu\n\n", 53, res->index);
     res =  jump_list(list, size, 2);
     printf("Found %d at index: %lu\n\n", 2, res->index);
