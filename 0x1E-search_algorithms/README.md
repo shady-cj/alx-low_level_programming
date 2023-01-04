@@ -709,3 +709,8 @@ Found 999 at index: (nil)
 
 What is the time complexity (average case) of a jump search in a singly linked list of size n, using step = sqrt(n)?
 **File** - 107-O
+
+
+### 15. Big O #7
+What is the time complexity (average case) of a jump search in a skip list of size n, with an express lane using step = sqrt(n)?
+**File** - 108-O
