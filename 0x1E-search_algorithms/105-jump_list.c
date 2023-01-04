@@ -18,8 +18,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	listint_t *bwd_ptr, *probe_ptr;
 	size_t jump = sqrt(size), i;
 
-	if (size == 0 || list == NULL)
-		return (NULL);
 	fwd_ptr = list;
 	while (fwd_ptr)
 	{
